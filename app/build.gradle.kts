@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
     id("com.google.gms.google-services")
 }
 
@@ -37,7 +40,9 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        dataBinding =  true
     }
+
 }
 
 
@@ -49,7 +54,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-firestore:24.11.1")
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
-    implementation("androidx.media3:media3-common:1.3.1")
+    implementation("androidx.databinding:databinding-common:8.4.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -57,9 +62,10 @@ dependencies {
     implementation ("com.google.firebase:firebase-firestore:24.11.1")
 
     version = "1.3.0"
-    implementation ("androidx.media3:media3-exoplayer:$version")
-    implementation ("androidx.media3:media3-exoplayer-dash:1.3.1")
-    implementation ("androidx.media3:media3-ui:$version")
-    implementation ("androidx.media3:media3-session:1.3.1")
+    // exoplayer
+    implementation ("com.google.android.exoplayer:exoplayer:2.18.2")
+
+    implementation ("com.android.support:multidex:1.0.3")
+    implementation("io.reactivex.rxjava3:rxkotlin:3.0.0")
 
 }

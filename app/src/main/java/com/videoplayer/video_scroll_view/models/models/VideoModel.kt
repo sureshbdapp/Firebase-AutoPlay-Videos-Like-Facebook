@@ -1,4 +1,4 @@
-package com.videoplayer
+package com.videoplayer.video_scroll_view.models.models
 
 class VideoModel {
     var name: String? = null

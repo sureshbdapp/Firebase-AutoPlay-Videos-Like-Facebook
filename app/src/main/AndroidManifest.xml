@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,6 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.VideoPlayer"
         tools:targetApi="31">
         <activity
@@ -17,7 +19,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".video_scroll_view.models.ActivityFacebookVideo"
             android:configChanges="orientation|screenSize|layoutDirection|screenLayout|smallestScreenSize|keyboardHidden|uiMode"
             android:exported="true"
             android:resizeableActivity="true"
